@@ -1,0 +1,90 @@
+* BODH
+This program converts binary, octal, decimal, or hex to other bases.
+
+** TODO Readme documentation
+    - [] write example below
+    - [] write installation guide
+      - [] prebuild
+      - [] self build
+    
+
+#+begin_src
+  # example usage
+#+end_src
+
+
+** Installation
+*** from prebuild
+
+*** self-build
+**** Requirement
+***** only GHC
+#+begin_src
+  # installation commands
+#+end_src
+
+** TODO functionality [0%] [0/11]
+    - [ ] binary <=> decimal [0%]
+      - [ ] support negative [0/2]
+        - [ ] 1s complement
+        - [ ] 2s complement
+    - [ ] binary <=> octal
+    - [ ] binary <=> hex
+    - [ ] decimal <=> octal
+    - [ ] decimal <=> hex
+    - [ ] octal <=> hex
+    - [ ] floating number support
+    - [ ] prefix support [0%]
+      - [ ] 0b or 0 for binary
+      - [ ] 0B for 1s complement (will convert to negative if left most after prefix is 1)
+      - [ ] 0B2 for 2s complement (will convert to negative if left most after prefix is 1)
+      - [ ] 0O for octal
+      - [ ] none or 0d decimal
+      - [ ] 0x for hex
+      - [ ] decimal point is floating number
+      - [ ] f + above prefix is floating number
+    - [ ] arguments [0%]
+      - [ ] h for help
+      - [ ] v for version
+      - [ ] o for output file
+      - [ ] i for input source
+      - [ ] b + B|B1|B2|O|D|H define base without prefix, even if there is prefix, this arg takes priority.
+      - [ ] a take the input as all possible base regardless of prefix, and convert to all bases
+      - [ ] d decimal point expression
+      - [ ] /B/B1/B2/O/D/H for only specific conversion [0/6]
+        - [ ] B convert to binary, if negative, convert to 2s
+        - [ ] B1 convert to 1s complement
+        - [ ] B2 convert to 2s complement
+        - [ ] O convert to octal
+        - [ ] D convert to decimal
+        - [ ] H convert to hex
+    - [ ] IO [0%]
+      - [ ] read from file
+      - [ ] out from file
+    - [ ] support arithmetic operations
+    
+
+** directory structure
+.
++-- bodh
+    +-- main.hs
+    +-- test.hs
+    +-- convert
+    |   +-- BO.hs   //Binary<=>Octal conversion
+    |   +-- BD.hs   //Binary<=>Decimal conversion
+    |   +-- BH.hs   //Binary<=>Hex conversion
+    |   +-- DO.hs   //Decimal<=>octal conversion
+    |   +-- DH.hs   //Decimal<=>Hex conversion
+    |   +-- OH.hs   //Octal<=>Hex conversion
+    |   +-- Float.hs //Float conversion
+    |
+    +-- parser
+    |   +-- Parse.hs
+    |
+    +-- util 
+    |   +-- Help.hs
+    |   +-- IOctrl.hs
+    -
+
+
+
